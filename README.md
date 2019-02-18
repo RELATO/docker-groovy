@@ -1,6 +1,14 @@
-# Groovy (s6-overlay) Docker ImageA
+# Groovy (s6-overlay) Docker Image
 
 Groovy support added with grapes volume share capability
+
+``` 
+docker volume create --name grapes-cache
+
+docker run -d  --network [yourparticularnetwork] --name groovy -v grapes-cache:/home/groovy/.groovy/grapes relato/groovy
+
+docker exec -it groovy bash
+``` 
 
 ## Based on Gradle (s6-overlay) Docker Image
 
